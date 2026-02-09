@@ -413,8 +413,9 @@ footer a:hover {
 /* Small screens (mobile) */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
     gap: 14px;
+    padding: 14px 20px;
+    flex-direction: row;
   }
 
   nav {
