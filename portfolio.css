@@ -33,6 +33,21 @@ p {
   line-height: 1.75;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #38bdf8;
+  border-radius: 2px;
+}
+
+
 /* ===== Header ===== */
 header {
   position: sticky;
@@ -406,11 +421,20 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #020617;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
 
   nav a {
-    margin: 8px 12px;
-    font-size: 14px;
+    margin: 10px 0;
+    font-size: 15px;
   }
 
   .hero {
@@ -428,6 +452,15 @@ footer a:hover {
   .about-container {
     padding: 30px 20px;
   }
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
 }
 
 /* Extra small screens (very small mobile) */
