@@ -79,4 +79,24 @@ overlay.addEventListener("click", () => {
   hamburger.classList.remove("active");
   overlay.classList.remove("show");
 });
+
+// ===== Hover cursor text =====
+const hoverLabel = document.getElementById("hover-label");
+const hoverItems = document.querySelectorAll(".hover-text");
+
+hoverItems.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    hoverLabel.textContent = item.dataset.hover;
+    hoverLabel.style.opacity = "1";
+  });
+
+  item.addEventListener("mouseleave", () => {
+    hoverLabel.style.opacity = "0";
+  });
+
+  item.addEventListener("mousemove", (e) => {
+    hoverLabel.style.left = e.clientX + "px";
+    hoverLabel.style.top = e.clientY + "px";
+  });
 });
+  });
